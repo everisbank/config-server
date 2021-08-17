@@ -1,6 +1,7 @@
 FROM openjdk:11.0.7-jre-slim-buster
 
-#RUN adduser --system --group spring
-#USER spring:spring
-COPY target/*.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+VOLUME /tmp
+EXPOSE 8888
+ARG JAR_FILE=target/*.jar
+ADD ${JAR_FILE} config-server.jar
+ENTRYPOINT ["java", "-jar", "/config-server.jar"]d

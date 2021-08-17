@@ -11,10 +11,10 @@ spring:
           username: ${GIT_USERNAME}
           password: ${GIT_TOKEN}
           default-label: "main"
-  security:
-    user:
-      name: ${SECURITY_USERNAME}
-      password: ${SECURITY_PASSWORD}
+#  security:
+#    user:
+#      name: ${SECURITY_USERNAME}
+#      password: ${SECURITY_PASSWORD}
 
 management:
   endpoints:
